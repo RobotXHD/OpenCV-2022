@@ -375,7 +375,7 @@ public class FreightF extends OpMode {
                     //arm.setTargetPosition(160);
                     //arm.setMode(DcMotor.RunMode.RUN_TO_POSITION);
                     //arm.setPower(1.0);
-                    arm.setTargetPosition(160);
+                    arm.setTargetPosition(470);
                     arm.setMode(DcMotor.RunMode.RUN_TO_POSITION);
                     arm.setPower(1.0);
                     while (arm.isBusy()) ;
