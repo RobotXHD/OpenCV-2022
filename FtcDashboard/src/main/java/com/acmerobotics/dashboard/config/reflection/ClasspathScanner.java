@@ -19,7 +19,7 @@ public class ClasspathScanner {
     public static final String TAG = "ClasspathScanner";
 
     private DexFile dexFile;
-    private Callback callback;
+    private final Callback callback;
 
     /**
      * {@link ClasspathScanner} callback interface.

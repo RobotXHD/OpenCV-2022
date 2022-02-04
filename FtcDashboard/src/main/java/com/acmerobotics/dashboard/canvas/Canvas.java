@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Canvas {
-    private List<CanvasOp> ops;
+    private final List<CanvasOp> ops;
 
     public Canvas() {
         ops = new ArrayList<>();

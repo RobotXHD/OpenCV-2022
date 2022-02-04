@@ -13,8 +13,8 @@ import java.util.List;
  * Delegate for a list of multiple telemetry objects.
  */
 public class MultipleTelemetry implements Telemetry {
-    private List<Telemetry> telemetryList;
-    private MultipleLog log;
+    private final List<Telemetry> telemetryList;
+    private final MultipleLog log;
 
     public MultipleTelemetry(Telemetry... telemetryList) {
         this.telemetryList = new ArrayList<>(Arrays.asList(telemetryList));
@@ -225,7 +225,7 @@ public class MultipleTelemetry implements Telemetry {
     }
 
     public class MultipleItem implements Item {
-        private List<Item> items;
+        private final List<Item> items;
 
         public MultipleItem(List<Item> items) {
             this.items = items;
@@ -323,7 +323,7 @@ public class MultipleTelemetry implements Telemetry {
     }
 
     public class MultipleLine implements Line {
-        private List<Line> lines;
+        private final List<Line> lines;
 
         public MultipleLine(List<Line> lines) {
             this.lines = lines;
@@ -367,7 +367,7 @@ public class MultipleTelemetry implements Telemetry {
     }
 
     public class MultipleLog implements Log {
-        private List<Log> logs;
+        private final List<Log> logs;
 
         public MultipleLog() {
             logs = new ArrayList<>();

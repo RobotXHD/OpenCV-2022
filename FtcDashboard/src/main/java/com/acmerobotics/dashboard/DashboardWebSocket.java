@@ -18,7 +18,7 @@ public class DashboardWebSocket extends NanoWSD.WebSocket {
 
     private static final boolean DEBUG = false;
 
-    private FtcDashboard dashboard;
+    private final FtcDashboard dashboard;
 
     DashboardWebSocket(NanoHTTPD.IHTTPSession handshakeRequest, FtcDashboard dash) {
         super(handshakeRequest);

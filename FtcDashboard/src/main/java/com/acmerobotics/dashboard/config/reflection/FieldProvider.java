@@ -13,8 +13,8 @@ import java.lang.reflect.Field;
 public class FieldProvider<T> implements ValueProvider<T> {
     private static final String TAG = "FieldProvider";
 
-    private Field field;
-    private Object parent;
+    private final Field field;
+    private final Object parent;
 
     public FieldProvider(Field field, Object parent) {
         this.field = field;

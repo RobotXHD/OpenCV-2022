@@ -2,8 +2,18 @@ package com.acmerobotics.dashboard.canvas;
 
 @SuppressWarnings({"checkstyle:MultipleVariableDeclarations", "checkstyle:EmptyLineSeparator"})
 public class Spline extends CanvasOp {
-    private double ax, bx, cx, dx, ex, fx;
-    private double ay, by, cy, dy, ey, fy;
+    private final double ax;
+    private final double bx;
+    private final double cx;
+    private final double dx;
+    private final double ex;
+    private final double fx;
+    private final double ay;
+    private final double by;
+    private final double cy;
+    private final double dy;
+    private final double ey;
+    private final double fy;
 
     public Spline(double ax, double bx, double cx, double dx, double ex, double fx,
                   double ay, double by, double cy, double dy, double ey, double fy) {

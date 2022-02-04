@@ -5,7 +5,7 @@ import com.acmerobotics.dashboard.message.Message;
 import com.acmerobotics.dashboard.message.MessageType;
 
 public class SaveConfig extends Message {
-    private CustomVariable configDiff;
+    private final CustomVariable configDiff;
 
     public SaveConfig(CustomVariable configDiff) {
         super(MessageType.SAVE_CONFIG);

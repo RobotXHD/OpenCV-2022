@@ -119,7 +119,7 @@ public class FreightF extends OpMode {
         Chassis.start();
         Systems.start();
     }
-    private Thread Chassis = new Thread( new Runnable() {
+    private final Thread Chassis = new Thread(new Runnable() {
         @Override
         public void run(){
             while(!stop) {
@@ -168,7 +168,7 @@ public class FreightF extends OpMode {
             }
         }
     });
-    private Thread Systems = new Thread( new Runnable() {
+    private final Thread Systems = new Thread(new Runnable() {
         @Override
         public void run() {
             while (!stop) {
@@ -275,7 +275,11 @@ public class FreightF extends OpMode {
                     loader.setPosition(0.0);
                 }
 
-
+                if(gamepad2.b) {
+                arm.setTargetPosition(200);
+                arm.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+                arm.setPower(0.7);
+                }
 
 
 

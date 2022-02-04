@@ -7,7 +7,7 @@ import com.acmerobotics.dashboard.telemetry.TelemetryPacket;
 import java.util.List;
 
 public class ReceiveTelemetry extends Message {
-    private List<TelemetryPacket> telemetry;
+    private final List<TelemetryPacket> telemetry;
 
     public ReceiveTelemetry(List<TelemetryPacket> packets) {
         super(MessageType.RECEIVE_TELEMETRY);

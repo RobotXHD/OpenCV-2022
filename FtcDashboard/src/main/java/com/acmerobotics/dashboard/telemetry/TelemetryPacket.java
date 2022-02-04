@@ -18,9 +18,9 @@ import java.util.TreeMap;
  */
 public class TelemetryPacket {
     private long timestamp;
-    private SortedMap<String, String> data;
-    private List<String> log;
-    private Canvas fieldOverlay;
+    private final SortedMap<String, String> data;
+    private final List<String> log;
+    private final Canvas fieldOverlay;
 
     /**
      * Creates a new telemetry packet.
@@ -86,7 +86,7 @@ public class TelemetryPacket {
      * all of the operations yet.
      */
     public static class Adapter implements Telemetry {
-        private FtcDashboard dashboard;
+        private final FtcDashboard dashboard;
         private TelemetryPacket currentPacket;
         private LogAdapter log;
 
@@ -227,7 +227,7 @@ public class TelemetryPacket {
     }
 
     private static class LogAdapter implements Telemetry.Log {
-        private TelemetryPacket telemetryPacket;
+        private final TelemetryPacket telemetryPacket;
 
         private LogAdapter(TelemetryPacket packet) {
             telemetryPacket = packet;

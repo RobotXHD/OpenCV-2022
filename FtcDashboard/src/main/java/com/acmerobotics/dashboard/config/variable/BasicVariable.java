@@ -3,8 +3,8 @@ package com.acmerobotics.dashboard.config.variable;
 import com.acmerobotics.dashboard.config.ValueProvider;
 
 public class BasicVariable<T> extends ConfigVariable<T> {
-    private VariableType type;
-    private ValueProvider<T> provider;
+    private final VariableType type;
+    private final ValueProvider<T> provider;
 
     private static <T> VariableType inferType(ValueProvider<T> provider) {
         Class<?> providerClass = provider.get().getClass();

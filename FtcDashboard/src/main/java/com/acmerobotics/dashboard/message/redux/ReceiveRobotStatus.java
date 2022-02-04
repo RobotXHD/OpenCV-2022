@@ -5,7 +5,7 @@ import com.acmerobotics.dashboard.message.Message;
 import com.acmerobotics.dashboard.message.MessageType;
 
 public class ReceiveRobotStatus extends Message {
-    private RobotStatus status;
+    private final RobotStatus status;
 
     public ReceiveRobotStatus(RobotStatus robotStatus) {
         super(MessageType.RECEIVE_ROBOT_STATUS);

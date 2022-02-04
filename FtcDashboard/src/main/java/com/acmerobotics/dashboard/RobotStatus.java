@@ -16,11 +16,11 @@ public class RobotStatus {
         STOPPED
     }
 
-    private boolean available;
-    private String activeOpMode;
-    private OpModeStatus activeOpModeStatus;
-    private String warningMessage;
-    private String errorMessage;
+    private final boolean available;
+    private final String activeOpMode;
+    private final OpModeStatus activeOpModeStatus;
+    private final String warningMessage;
+    private final String errorMessage;
 
     /**
      * Creates a status object with the default values.

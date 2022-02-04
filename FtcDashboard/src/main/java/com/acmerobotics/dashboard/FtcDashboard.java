@@ -196,21 +196,21 @@ public class FtcDashboard implements OpModeManagerImpl.Notifications {
     }
 
     private boolean enabled;
-    private SharedPreferences prefs;
+    private final SharedPreferences prefs;
     private final List<MenuItem> enableMenuItems, disableMenuItems;
 
     private DashboardWebSocketServer server;
     private final List<DashboardWebSocket> sockets = new ArrayList<>();
 
-    private TelemetryPacket.Adapter telemetry;
+    private final TelemetryPacket.Adapter telemetry;
     private ExecutorService telemetryExecutorService;
     private long lastPacketTimestamp;
-    private volatile List<TelemetryPacket> pendingTelemetry = new ArrayList<>();
+    private final List<TelemetryPacket> pendingTelemetry = new ArrayList<>();
     private final Object telemetryLock = new Object();
     private int telemetryTransmissionInterval = DEFAULT_TELEMETRY_TRANSMISSION_INTERVAL;
 
     private final Object configLock = new Object();
-    private CustomVariable configRoot; // guarded by configLock
+    private final CustomVariable configRoot; // guarded by configLock
     private final List<String[]> varsToRemove = new ArrayList<>(); // guarded by configLock
 
     private ExecutorService cameraStreamExecutor;
@@ -231,7 +231,7 @@ public class FtcDashboard implements OpModeManagerImpl.Notifications {
     private TextView connectionStatusTextView;
     private LinearLayout parentLayout;
 
-    private Gson gson;
+    private final Gson gson;
 
     private class TelemetryUpdateRunnable implements Runnable {
         @Override
@@ -320,8 +320,8 @@ public class FtcDashboard implements OpModeManagerImpl.Notifications {
     }
 
     private class CameraStreamRunnable implements Runnable {
-        private CameraStreamSource source;
-        private double maxFps;
+        private final CameraStreamSource source;
+        private final double maxFps;
 
         private CameraStreamRunnable(CameraStreamSource source, double maxFps) {
             this.source = source;

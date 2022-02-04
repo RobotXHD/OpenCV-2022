@@ -23,10 +23,10 @@ public abstract class CanvasOp {
         FILL,
 
         @SerializedName("strokeWidth")
-        STROKE_WIDTH;
+        STROKE_WIDTH
     }
 
-    private Type type;
+    private final Type type;
 
     public CanvasOp(Type type) {
         this.type = type;

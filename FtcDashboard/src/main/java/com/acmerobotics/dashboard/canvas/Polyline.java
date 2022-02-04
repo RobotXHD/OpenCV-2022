@@ -1,8 +1,8 @@
 package com.acmerobotics.dashboard.canvas;
 
 public class Polyline extends CanvasOp {
-    private double[] xPoints;
-    private double[] yPoints;
+    private final double[] xPoints;
+    private final double[] yPoints;
 
     public Polyline(double[] xPoints, double[] yPoints) {
         super(Type.POLYLINE);

@@ -61,10 +61,10 @@ public class AutonomAdevarat extends LinearOpMode {
     private Servo grabber_left;
     private Servo grabber_right;
 
-    private double crThreshHigh = 150;
-    private double crThreshLow = 120;
-    private double cbThreshHigh = 255;
-    private double cbThreshLow = 255;
+    private final double crThreshHigh = 150;
+    private final double crThreshLow = 120;
+    private final double cbThreshHigh = 255;
+    private final double cbThreshLow = 255;
     int currentmotorBL;
     int currentmotorBR;
     int currentmotorFL;

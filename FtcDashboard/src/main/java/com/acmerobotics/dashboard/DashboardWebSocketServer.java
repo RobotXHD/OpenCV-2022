@@ -8,7 +8,7 @@ import fi.iki.elonen.NanoWSD;
 public class DashboardWebSocketServer extends NanoWSD {
     private static final int PORT = 8000;
     
-    private FtcDashboard dashboard;
+    private final FtcDashboard dashboard;
     
     DashboardWebSocketServer(FtcDashboard dashboard) {
         super(PORT);
