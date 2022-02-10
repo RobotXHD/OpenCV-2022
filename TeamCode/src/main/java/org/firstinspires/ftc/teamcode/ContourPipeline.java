@@ -17,11 +17,11 @@ import java.util.List;
 // Credits to team 7303 RoboAvatars, adjusted by team 3954 Pink to the Future
 
 public class ContourPipeline extends OpenCvPipeline {
-    Scalar HOT_PINK = new Scalar(196, 23, 112);
+    Scalar HOT_PINK = new Scalar(255, 255, 0);
 
     // Pink, the default color                         Y      Cr     Cb    (Do not change Y)
-    public static Scalar scalarLowerYCrCb = new Scalar(0.0, 150.0, 120.0);
-    public static Scalar scalarUpperYCrCb = new Scalar(255.0, 255.0, 255.0);
+    public static Scalar scalarLowerYCrCb = new Scalar(20.0, 128.0, 128.0);
+    public static Scalar scalarUpperYCrCb = new Scalar(40.0, 255.0, 255.0);
 
     // Green                                             Y      Cr     Cb
     // public static Scalar scalarLowerYCrCb = new Scalar(  0.0, 0.0, 0.0);
@@ -44,12 +44,12 @@ public class ContourPipeline extends OpenCvPipeline {
     private int loopCounter = 0;
     private int pLoopCounter = 0;
 
-    private final Mat mat = new Mat();
-    private final Mat processed = new Mat();
-    private final Mat output = new Mat();
+    private Mat mat = new Mat();
+    private Mat processed = new Mat();
+    private Mat output = new Mat();
 
     private Rect maxRect = new Rect(600,1,1,1);
-    private final Rect rect = new Rect(600,1,1,1);
+    private Rect rect = new Rect(600,1,1,1);
 
     private double maxArea = 0;
     private boolean first = false;
@@ -85,7 +85,7 @@ public class ContourPipeline extends OpenCvPipeline {
         CAMERA_HEIGHT = input.height();
         try {
             // Process Image
-            Imgproc.cvtColor(input, mat, Imgproc.COLOR_RGB2YCrCb);
+            Imgproc.cvtColor(input, mat, Imgproc.COLOR_RGB2HSV);
             Core.inRange(mat, scalarLowerYCrCb, scalarUpperYCrCb, processed);
             // Core.bitwise_and(input, input, output, processed);
 
